@@ -56,6 +56,24 @@ Select ONE Additional Feature to Add
     <div id="book-result">
       <p id="book-text"></p>
     </div>
+    <hr/>
+    <!-- Vocal Stim Question -->
+    <form id="meme-form">
+      <label>
+        🗣️ What is my favorite meme to quote?
+        <select id="meme-answer">
+          <option value="meme1">meme 1</option>
+          <option value="meme2">If you want a burger, eat a burger</option>
+          <option value="meme3">EhH sOrRy...NePaL</option>
+          <option value="meme4">meme 4</option>
+        </select>
+      </label>
+      <button type="sumbit">Check Meme Answer</button>
+      </form>
+      <div id="meme-result">
+        <p id="meme-text"></p>
+      </div>
+      <hr/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       
@@ -87,6 +105,19 @@ Select ONE Additional Feature to Add
         else {
           $("#book-text").text("Try Again!");
         }
+      });
+
+      //=======================Meme Question jQuery Code
+      $("#meme-form").on("sumbit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#meme-answer");
+        var answer = answer.val();
+
+        if (answer === "meme-1") {
+          $("meme-text").text("MY FAVORITE VOCAL STIM");
+        }
+        
       });
       
     </script>
