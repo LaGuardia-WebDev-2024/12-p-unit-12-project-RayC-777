@@ -1,5 +1,17 @@
+body {
+  background-image: url("https://www.valarflowers.com/cdn/shop/files/DSC06153.jpg?v=1758103986&width=1500");
+
+  background-attachment: fixed;
+
+  background-size: cover;      
+  
+  background-position: center; 
+  
+  background-repeat: no-repeat;
+}
+
 #movie-result {
-  background: rgb(252, 125, 197);
+  background: #f4b6cf;
   border: 5px solid black;
   font-size: 24px;
   min-height: 160px;
@@ -8,7 +20,7 @@
 }
 
 #book-result {
-  background: rgb(196, 159, 255);
+  background: #E099DB;
   border: 5px solid black;
   font-size: 24px;
   min-height: 160px;
@@ -17,7 +29,7 @@
 }
 
 #meme-result {
-  background: rgb(159, 212, 255);
+  background: #B19ADE;
   border: 5px solid black;
   font-size: 24px;
   min-height: 160px;
@@ -26,7 +38,7 @@
 }
 
 #cartoon-result {
-  background: rgb(147, 240, 186);
+  background: #C5BDE6;
   border: 5px solid black;
   font-size: 24px;
   min-height: 160px;
@@ -34,8 +46,8 @@
   margin-bottom: 20px;
 }
 
-#princess-result {
-  background: rgb(255, 247, 131);
+#dance-result {
+  background: #C2E2FA;
   border: 5px solid black;
   font-size: 24px;
   min-height: 160px;
