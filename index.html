@@ -21,17 +21,17 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Reina's Pop Quiz!</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite fictional movie?
+        🎥 What is my favorite  movie?
         <select id="movie-answer">
-          <option value="movie1">The Hunger Games: Catching Fire</option>
+          <option value="movie1">The Sandlot</option>
           <option value="movie2">Enchanted</option>
-          <option value="movie3">Harry Potter: The Prisoner of Azkaban</option>
-          <option value="movie4">Matilda</option>
+          <option value="movie3">US</option> 
+          <option value="movie4">Singin In The Rain</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
@@ -65,7 +65,7 @@ Select ONE Additional Feature to Add
           <option value="meme1">I am disgusted I am revolted</option>
           <option value="meme2">If you want a burger, eat a burger</option>
           <option value="meme3">EhH sOrRy...NePaL</option>
-          <option value="meme4">Ya Yeet</option>
+          <option value="meme4">Boring, yawning, sloppy, lazy</option>
         </select>
       </label>
       <button type="sumbit">Check Meme Answer</button>
@@ -108,21 +108,21 @@ Select ONE Additional Feature to Add
         <p id="princess-text"></p>
       </div>
       <hr/>
-      <!-- Dance Style Question -->
-    <form id="dance-form">
+      <!-- Birthday  Question -->
+    <form id="birthday-form">
       <label>
-        📺 Who is my favorite Disney Princess?
-        <select id="dance-answer">
-          <option value="dance1">Snow White</option>
-          <option value="dance2">Tiana</option>
-          <option value="dance3">Jasmine</option>
-          <option value="dance4">Aurora</option>
+        🎂 Lastly, when's my birthday!
+        <select id="birthday-answer">
+          <option value="birthday1">Dec 25th</option>
+          <option value="birthday2">July 16th</option>
+          <option value="birthday3">May 11th</option>
+          <option value="birthday4">November 27th</option>
         </select>
       </label>
-      <button type="sumbit">Check Dance Answer</button>
+      <button type="sumbit">Check Birthday Answer</button>
       </form>
-      <div id="dance-result">
-        <p id="dance-text"></p>
+      <div id="birthday-result">
+        <p id="birthday-text"></p>
       </div>
       <hr/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -132,15 +132,33 @@ Select ONE Additional Feature to Add
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
 
+        $("#movie-text").hide()
+
         var $answer = $("#movie-answer");
         var answer = $answer.val();
-
+        
         if (answer === "movie1") {
-          $("#movie-text").text("YESSSS!");
-        } 
-        else {
-          $("#movie-text").text("Try Again!");
+          $("#movie-text").text("This takes second place cuz I could literally quote any line from this movie like its nothing I swear. I love watching sports. My faves are soccer (cuz I'm Argentinian) but I also love baseball. My mom and I are always going to games, and this movie is such a good way of showing the lives of those who are dedicated to what they love. Its so funny, and is really timeless.")
         }
+        // $("#movie-text").slideDown(1000)
+
+        //  $("#movie-text").hide()
+
+        if (answer === "movie2") {
+          $("#movie-text").text("Absolutely! I could take about this movie literally all day! Its one of those lesser known Disney movies that are literally so magical. And its so funny! Amy Adams does such a good job of portraying the stereotypical princess who is hit with reality")
+        } 
+       
+        if (answer === "movie3") {
+          $("#movie-text").text("Omg nononononono I hate horror, lol. To be fair, This was a really good movie, and its plot twist does a really good job at playing with your mind. I watched this when I was ending elementary school, though, and mirrors made me uncomfortable for weeks after that.")
+        } 
+
+        if (answer === "movie4") {
+          $("#movie-text").text("Its not my favorite, but its such a iconic movie and musical. I'm currently learning the tap peices from it, and its one of those golden age musicals that are always so fun to watch, and it doesn't feel 'old', ya know?")
+        } 
+
+        $("#movie-text").slideDown(1000)
+       
+       
       });
 
       //=======================Book Question jQuery Code
@@ -165,11 +183,13 @@ Select ONE Additional Feature to Add
         var $answer = $("#meme-answer");
         var answer = answer.val();
 
-        if (answer === "meme-1") {
+        if (answer === "meme1") {
           $("meme-text").text("MY FAVORITE VOCAL STIM");
         }
         
       });
+
+      
       
     </script>
   </body>
