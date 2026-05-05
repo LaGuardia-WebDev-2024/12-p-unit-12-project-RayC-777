@@ -41,6 +41,7 @@ Select ONE Additional Feature to Add
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
+      <img id="movie-pic" width="200">
     </div>
     <hr />
     <!-- Book Question -->
@@ -141,7 +142,7 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
         
         if (answer === "movie1") {
-          $("#movie-text").text("No, but takes second place cuz I could literally quote any line from this movie like its nothing I swear. Its such a good moving that shows the lives of those who are dedicated to what they love. Its also rlly funny!")
+          $("#movie-text").text("No, but takes second place cuz I could literally quote any line from this movie like its nothing I swear.")
         }
 
         if (answer === "movie2") {
@@ -149,14 +150,18 @@ Select ONE Additional Feature to Add
         } 
        
         if (answer === "movie3") {
-          $("#movie-text").text("lol oh nononononono I hate horror. To be fair, This was a really good movie, and its plot twist does a really good job at playing with your mind. I watched this when I was ending elementary school, though, and mirrors made me uncomfortable for weeks after that.")
+          $("#movie-text").text("lol oh nononononono I hate horror. I watched this when I was ending elementary school, though, and mirrors made me uncomfortable for weeks after that.")
         } 
 
         if (answer === "movie4") {
-          $("#movie-text").text("No. I watched it for the first time recently, all all the actors in that movie are actually some of my faves (Anne H., Meryl, Emily, Stanley). I was working while watching, so maybe I'll like it better if I sit through it :)")
+          $("#movie-text").text("No. I watched it for the first time recently. Maybe I'll like it better if I sit through it :)")
         } 
 
         $("#movie-text").slideDown(1000)
+       
+       $("#movie-pic").attr("src", "https://hips.hearstapps.com/hmg-prod/images/bright-forget-me-nots-royalty-free-image-1677788394.jpg?crop=0.535xw:1.00xh;0.359xw,0")
+       $("#movie-pic").animate({width:"400px"}, 2000);
+
        
       });
 
