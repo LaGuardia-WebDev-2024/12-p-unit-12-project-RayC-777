@@ -56,7 +56,7 @@ body {
 }
 
 #birthday-result {
-  background: #a3ecf1;
+  background: #aae6e9;
   border: 5px solid white;
   font-size: 24px;
   min-height: 160px;
@@ -74,7 +74,89 @@ hr {
 
 h1 {
 color: #ffffff;
+background-color: #c8bde6;
 text-align: center;
 font-size: 3.5em;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
 }
+
+#movie-text {
+  color: #ffffff;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+#movie-form {
+  color: #ffffff;
+  background-color: #483d7c;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+#book-text {
+   color: #ffffff;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+#book-form {
+  color: #ffffff;
+ background-color: #483d7c;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+#meme-text {
+   color: #ffffff;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+#meme-form {
+  color: #ffffff;
+ background-color: #483d7c;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+
+#cartoon-text {
+   color: #ffffff;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+#cartoon-form {
+  color: #ffffff;
+  background-color: #483d7c;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+#princess-text {
+   color: #ffffff;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+#princess-form {
+  color: #ffffff;
+  background-color: #483d7c;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+#birthday-text {
+   color: #ffffff;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+#birthday-form {
+  color: #ffffff;
+  background-color: #483d7c;
+text-align: center;
+font-family: 'Monaspace Neon', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
 

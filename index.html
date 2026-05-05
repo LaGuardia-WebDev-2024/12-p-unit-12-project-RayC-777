@@ -23,15 +23,18 @@ Select ONE Additional Feature to Add
   <body>
     <h1>Reina's Pop Quiz!</h1>
     <hr />
+    
+    //<img id="myGif" src="https://i.makeagif.com/media/12-19-2023/00ytnQ.gif" style="display:none; height:0; overflow:hidden;">
+
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
         🎥 What is my favorite  movie?
         <select id="movie-answer">
           <option value="movie1">The Sandlot</option>
-          <option value="movie2">Enchanted</option>
+          <option value="movie2">The Hunchback of Notre Dame</option>
           <option value="movie3">US</option> 
-          <option value="movie4">Singin In The Rain</option>
+          <option value="movie4">The Devil Wears Prada</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
@@ -43,11 +46,11 @@ Select ONE Additional Feature to Add
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is my favorite book?
+        📖 What is my favorite book I've read recently?
         <select id="book-answer">
           <option value="book1">The Adventures of Sherlock Homes</option>
           <option value="book2">The Great Gatsby</option>
-          <option value="book3">Love is a Revolution</option>
+          <option value="book3">Dracul</option>
           <option value="book4">To Kill a Mockingbird</option>
         </select>
       </label>
@@ -65,7 +68,7 @@ Select ONE Additional Feature to Add
           <option value="meme1">I am disgusted I am revolted</option>
           <option value="meme2">If you want a burger, eat a burger</option>
           <option value="meme3">EhH sOrRy...NePaL</option>
-          <option value="meme4">Boring, yawning, sloppy, lazy</option>
+          <option value="meme4">I hear this aggitating, grating voice</option>
         </select>
       </label>
       <button type="sumbit">Check Meme Answer</button>
@@ -77,11 +80,11 @@ Select ONE Additional Feature to Add
     <!-- Childhood Show Question -->
     <form id="cartoon-form">
       <label>
-        📺 What is my favorite childhood cartoon show?
+        📺 What is my favorite childhood cartoon show? (two answers)
         <select id="cartoon-answer">
           <option value="cartoon1">Animaniacs</option>
-          <option value="cartoon2">The Amazing World of Gumball</option>
-          <option value="cartoon3">Sofia The First</option>
+          <option value="cartoon2">Cyberchase</option>
+          <option value="cartoon3">Pocoyo</option>
           <option value="cartoon4">Angelina Ballerina</option>
         </select>
       </label>
@@ -96,9 +99,9 @@ Select ONE Additional Feature to Add
       <label>
         📺 Who is my favorite Disney Princess?
         <select id="princess-answer">
-          <option value="princessn1">Snow White</option>
+          <option value="princess1">Snow White</option>
           <option value="princess2">Tiana</option>
-          <option value="princess3">Jasmine</option>
+          <option value="princess3">Cinderella</option>
           <option value="princess4">Aurora</option>
         </select>
       </label>
@@ -138,26 +141,22 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
         
         if (answer === "movie1") {
-          $("#movie-text").text("This takes second place cuz I could literally quote any line from this movie like its nothing I swear. I love watching sports. My faves are soccer (cuz I'm Argentinian) but I also love baseball. My mom and I are always going to games, and this movie is such a good way of showing the lives of those who are dedicated to what they love. Its so funny, and is really timeless.")
+          $("#movie-text").text("No, but takes second place cuz I could literally quote any line from this movie like its nothing I swear. Its such a good moving that shows the lives of those who are dedicated to what they love. Its also rlly funny!")
         }
-        // $("#movie-text").slideDown(1000)
-
-        //  $("#movie-text").hide()
 
         if (answer === "movie2") {
-          $("#movie-text").text("Absolutely! I could take about this movie literally all day! Its one of those lesser known Disney movies that are literally so magical. And its so funny! Amy Adams does such a good job of portraying the stereotypical princess who is hit with reality")
+          $("#movie-text").text("Yes, and in my opinion one of the best disney movies! Its based on a book, too, and its so dark, and the villian feels like a real person. Its a really beautiful way of making a story about the beauty within that isn't forced.")
         } 
        
         if (answer === "movie3") {
-          $("#movie-text").text("Omg nononononono I hate horror, lol. To be fair, This was a really good movie, and its plot twist does a really good job at playing with your mind. I watched this when I was ending elementary school, though, and mirrors made me uncomfortable for weeks after that.")
+          $("#movie-text").text("lol oh nononononono I hate horror. To be fair, This was a really good movie, and its plot twist does a really good job at playing with your mind. I watched this when I was ending elementary school, though, and mirrors made me uncomfortable for weeks after that.")
         } 
 
         if (answer === "movie4") {
-          $("#movie-text").text("Its not my favorite, but its such a iconic movie and musical. I'm currently learning the tap peices from it, and its one of those golden age musicals that are always so fun to watch, and it doesn't feel 'old', ya know?")
+          $("#movie-text").text("No. I watched it for the first time recently, all all the actors in that movie are actually some of my faves (Anne H., Meryl, Emily, Stanley). I was working while watching, so maybe I'll like it better if I sit through it :)")
         } 
 
         $("#movie-text").slideDown(1000)
-       
        
       });
 
@@ -165,31 +164,147 @@ Select ONE Additional Feature to Add
       $("#book-form").on("submit", function (event) {
         event.preventDefault();
 
+        $("#book-text").hide()
+
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
         if (answer === "book1") {
-          $("#book-text").text("YESSSS!");
+          $("#book-text").text("Its not, but its still so good! I read this book last summer, it has so many great adventures to follow along to. Its a classic, but Sherlock is actually so funny, and the way that his investigations unfold make it feel like everything he does is so easy as a detective, and that the answer was under your nose the entire time.");
         } 
-        else {
-          $("#book-text").text("Try Again!");
-        }
+
+        if (answer === "book2") {
+          $("#book-text").text("Not quite. I remember also reading this book last summer and being taken on a rollercoaster of emotions. I love learning about the Prohibition Era, and the age of Jazz, so this book was a perfect mixture of that. The movie and musical are also so fire!!!")
+        } 
+
+        if (answer === "book3") {
+          $("#book-text").text("YES! You might think this is a spelling error but its not I promise. Its about the story of the author of Dracula, Bram Stoker, and the inspiration behind his book in 'real events', according to him. It has so many cool details and characters who are the family memebers of Bram. Its actually really creepy, even though I'm not into horror, I would 10/10 recommend!!!")
+        } 
+
+        if (answer === "book4") {
+          $("#book-text").text("Nope lol. But its up there in my top ten fo sho. It has so many components, and it really speaks well on racial injustice :)")
+        } 
+        
+        $("#book-text").slideDown(1000)
       });
 
       //=======================Meme Question jQuery Code
-      $("#meme-form").on("sumbit", function (event) {
+      $("#meme-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#meme-answer");
-        var answer = answer.val();
+        $("#meme-text").hide()
 
-        if (answer === "meme1") {
-          $("meme-text").text("MY FAVORITE VOCAL STIM");
-        }
+        var $answer = $("#meme-answer");
+        var answer = $answer.val();
         
+        if (answer === "meme1") {
+          $("#meme-text").text("Nah. I only really use it when I'm tired or upset But its so goofy he just gets into a washing machine XD")
+        }
+
+        if (answer === "meme2") {
+          $("#meme-text").text("Its not my favorite, but I do say this a lot. This is one of my fav food combos, so I might use this to convince my mom to go to shake shack (it rarely works 🙄)")
+        } 
+       
+        if (answer === "meme3") {
+          $("#meme-text").text("YES OML I PROBABLY DRIVE MY FRIENDS CRAZY! I'm always saying this, I even got my mom to start quoting it like I'm doomed. Its just so funny for no reason. If I have a bad audition or performance, I always come back to this comedy gold.")
+        } 
+
+        if (answer === "meme4") {
+          $("#meme-text").text("Nah. Its only here cuz everyone who knows me well knows I have a chronic attachment to Dance Moms. Abby Lee sucks, ok? But shes so fricking funny I can't help it")
+        } 
+
+        $("#meme-text").slideDown(1000)
+       
       });
 
-      
+      //=======================Cartoon Question jQuery Code
+      $("#cartoon-form").on("submit", function (event) {
+        event.preventDefault();
+
+        $("#cartoon-text").hide()
+
+        var $answer = $("#cartoon-answer");
+        var answer = $answer.val();
+        var gif = $('#cartoon-gif');
+        
+        if (answer === "cartoon1") {
+          $("#cartoon-text").text("OMG OMG THIS IS PEAK KIDS TV YOU DON'T UNDERSTAND ITS SO UNDERRATED. I did a website based on this show a while back I literally love these sillies. The 'United States Canada Mexico Panama' song lived in my head rent free as a kid (I think I still have it memorized ngl). This is where I got all my history knowledge from. The songs are so good, and the jokes are literally so iconic. I quote something from this show on the daily.");
+        }
+
+        if (answer === "cartoon2") {
+          $("#cartoon-text").text("Nope, but I watched this all the time. I feel like this show is also underatted. Please tell me I'm not the only one who watched this")
+        } 
+       
+        if (answer === "cartoon3") {
+          $("#cartoon-text").text("It isn't this one, either. But it gets a special mention cuz I used to watch it in spanish too, and thats how I started to learn! Its kinda niche, but its so cute!")
+        } 
+
+        if (answer === "cartoon4") {
+          $("#cartoon-text").text("OF COURSE IT WAS!!! This was my dancer origin story I swear! She was so graceful to me and I tried to follow along the tv when she danced like I was that obsessed. I had all the movies and watched every tv spinoff. This show had me in a chokehold I wanted to be her so bad.")
+        } 
+
+        $("#cartoon-text").slideDown(1000)
+       
+      });
+
+      //=======================Princess Question jQuery Code
+      $("#princess-form").on("submit", function (event) {
+        event.preventDefault();
+
+        $("#princess-text").hide()
+
+        var $answer = $("#princess-answer");
+        var answer = $answer.val();
+        
+        if (answer === "princess1") {
+          $("#princess-text").text("My absolute favorite growing up, and she still is. I really don't undertsand the hate (other than the live action) She was a teenage girl being hunted down by  the only family she had, and she still was able to stay positive, humble, and kind. I need that kind of energy to spread around, I feel like everyone does 💛");
+        }
+
+        if (answer === "princess2") {
+          $("#princess-text").text("She is #2 just because I need her on screen more. I need more than her in just her frog form. She is the literal reason I love to bake and cook. I put her on my vision board once because I found her so inspiring. I still do, she was the first princess I saw that looked like me!💚");
+        } 
+       
+        if (answer === "princess3") {
+          $("#princess-text").text("Sadly no. I get the hype, but she has so much of it. I feel like I gotta give other princesses credit. But she is so iconic 🩵");
+        } 
+
+        if (answer === "princess4") {
+          $("#princess-text").text("She is in 3rd place. I love her pink and blue theme, because I also can't chose between the two. She's always daydreaming and thinking of good things to come, and I relate. Also, she is constantly sleeping...living the life I need rn. 💙🩷");
+        } 
+
+        $("#princess-text").slideDown(1000)
+       
+      });
+
+
+      //=======================Birthday Question jQuery Code
+      $("#birthday-form").on("submit", function (event) {
+        event.preventDefault();
+
+        $("#birthday-text").hide()
+
+        var $answer = $("#birthday-answer");
+        var answer = $answer.val();
+        
+        if (answer === "birthday1") {
+          $("#birthday-text").text("Nope, and as cool as it sounds, the whole 'one gift for your birthday or for Christmas' situation sounds complicated.")
+        }
+
+        if (answer === "birthday2") {
+          $("#birthday-text").text("Nuh-uh! Try again!")
+        } 
+       
+        if (answer === "birthday3") {
+          $("#birthday-text").text(" HECK YEAH! In six days i'll be 18. I can't believe it!😦 Still, I'm very excited to celebrate next Monday!!! 🥳")
+        } 
+
+        if (answer === "birthday4") {
+          $("#birthday-text").text("This isn't it either. Give it another guess!");
+        } 
+
+        $("#birthday-text").slideDown(1000)
+       
+      });
       
     </script>
   </body>
